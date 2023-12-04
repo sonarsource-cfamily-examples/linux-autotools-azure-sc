@@ -7,10 +7,10 @@ jobs:
     BUILD_WRAPPER_DOWNLOAD_URL: https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
   steps:
   - task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '17'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
+    inputs:
+      versionSpec: '17'
+      jdkArchitectureOption: 'x64'
+      jdkSourceOption: 'PreInstalled'
   - task: SonarCloudPrepare@1
     inputs:
       SonarCloud: 'SonarCloud' # Name of the SonarCloud service connection you created
