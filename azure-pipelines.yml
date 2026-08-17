@@ -24,4 +24,9 @@ jobs:
       build-wrapper-linux-x86-64 --out-dir build_wrapper_output_directory make clean all
     workingDirectory: .
     displayName: Build in build-wrapper
+  - task: JavaToolInstaller@0
+    inputs:
+      versionSpec: '21'
+      jdkArchitectureOption: 'x64'
+      jdkSourceOption: 'PreInstalled'
   - task: SonarCloudAnalyze@1
